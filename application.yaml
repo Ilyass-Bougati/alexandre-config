@@ -3,3 +3,6 @@ otel:
     exporter: none
   logs:
     exporter: none
+
+server:
+  port: 0

@@ -14,17 +14,6 @@ spring:
     show-sql: true
     open-in-view: true
 
-otel:
-  metrics:
-    exporter: none
-  logs:
-    exporter: none
-
-
-server:
-  port: 8081
-
-
 eureka:
   client:
     serviceUrl:
