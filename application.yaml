@@ -1,3 +1,15 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/Alexandre
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+jwt-converter:
+  resource-id: public-client
+  principle-attribute: preferred_username
+
 otel:
   metrics:
     exporter: none
