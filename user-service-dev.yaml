@@ -26,6 +26,3 @@ keycloak:
   realm: Alexandre
   client-id: public-client
   client-secret: aa
-
-server:
-  port: 10001
