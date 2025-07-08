@@ -1,0 +1,37 @@
+spring:
+  main:
+    web-application-type: reactive
+
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            ## User Service Route
+            - id: user-service
+              uri: lb://user-service
+              predicates:
+                - Path=/auth/api/**, /profile/api/**, /city/api/**, /address/api/**, /paymentmethod/api/**
+
+            ## Order Service Route
+            - id: order-service
+              uri: lb://order-service
+              predicates:
+                - Path=/order/api/**
+
+            ## Inventory Service Route
+            - id: inventory-service
+              uri: lb://inventory-service
+              predicates:
+                - Path=/inventory/api/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 4000

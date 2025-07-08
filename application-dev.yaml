@@ -17,4 +17,4 @@ otel:
     exporter: none
 
 server:
-  port: 0
+  port: 8000
