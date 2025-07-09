@@ -16,10 +16,9 @@ otel:
   logs:
     exporter: none
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka/
+jwt-converter:
+  resource-id: public-client
+  principle-attribute: preferred_username
 
 server:
   port: 0
