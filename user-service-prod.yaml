@@ -14,11 +14,6 @@ spring:
     show-sql: true
     open-in-view: true
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
 keycloak:
   url: http://localhost:8080/
   admin-username: ${KC_ADMIN_USERNAME:alex}
