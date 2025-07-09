@@ -15,10 +15,8 @@ otel:
     exporter: none
   logs:
     exporter: none
-
-jwt-converter:
-  resource-id: public-client
-  principle-attribute: preferred_username
-
+  exporter:
+    otlp:
+      endpoint: http://${TEMPO_HOST:localhost}:${TEMPO_PORT:4318}/
 server:
   port: 0
