@@ -18,5 +18,6 @@ otel:
   exporter:
     otlp:
       endpoint: http://${TEMPO_HOST:localhost}:${TEMPO_PORT:4318}/
+
 server:
   port: 0
