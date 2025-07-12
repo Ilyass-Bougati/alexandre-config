@@ -10,6 +10,15 @@ jwt-converter:
   resource-id: public-client
   principle-attribute: preferred_username
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
 otel:
   metrics:
     exporter: none
