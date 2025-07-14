@@ -14,5 +14,15 @@ spring:
     show-sql: true
     open-in-view: true
 
+  kafka:
+    bootstrap-servers: ${KAFKA_HOST:localhost}:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.type.mapping: event:com.alexandre.orderservice.event.NotificationEvent
+    template:
+      default-topic: "notification"
+
 server:
   port: 8082
