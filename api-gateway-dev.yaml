@@ -20,7 +20,7 @@ spring:
             - id: order-service
               uri: lb://order-service
               predicates:
-                - Path=/order/api/**
+                - Path=/order/api/**, /item/api/**
 
             ## Inventory Service Route
             - id: inventory-service
