@@ -30,5 +30,5 @@ server:
 
 stripe:
 #  secret-key: ${STRIPE_API_KEY}
-  success-url: http://localhost:8085/payment/api/v1/success
-  cancel-url: http://localhost:8085/payment/api/v1/cancel
+  success-url: http://localhost:8085/payment/api/v1/success/
+  cancel-url: http://localhost:8085/payment/api/v1/cancel/
