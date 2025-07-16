@@ -28,5 +28,11 @@ spring:
               predicates:
                 - Path=/inventory/api/**
 
+            ## Payment Service Route
+            - id: payment-service
+              uri: lb://payment-service
+              predicates:
+                - Path=/payment/api/**
+
 server:
   port: 4000
