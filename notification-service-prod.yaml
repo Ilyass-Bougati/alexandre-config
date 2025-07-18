@@ -13,9 +13,9 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-#sendgrid:
-#  api-key: ${SENDGRID_API_KEY}
-#  from-email: ${FROM_EMAIL}
+sendgrid:
+  api-key: ${SENDGRID_API_KEY}
+  from-email: ${FROM_EMAIL}
 
 server:
   port: 8084
