@@ -14,6 +14,18 @@ spring:
     show-sql: true
     open-in-view: true
 
+  kafka:
+    bootstrap-servers: ${KAFKA_HOST:localhost}:9092
+
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: user-service
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
 keycloak:
   url: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:8080}/
   admin-username: ${KC_ADMIN_USERNAME:alex}
