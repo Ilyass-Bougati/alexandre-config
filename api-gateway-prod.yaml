@@ -11,7 +11,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "https://alexandre-git-client-dev-ilyass-projects-d1496057.vercel.app/"
             allowedMethods:
               - GET
               - POST
