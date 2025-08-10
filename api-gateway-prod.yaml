@@ -7,6 +7,15 @@ spring:
 
   cloud:
     gateway:
+      # For testing purposes - THIS CAN'T BE USED IN PROD
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
+            
       server:
         webflux:
           routes:
