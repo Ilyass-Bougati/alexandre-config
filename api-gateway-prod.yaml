@@ -12,7 +12,12 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+              - PUT
+              - DELETE
             allowedHeaders: "*"
             allowCredentials: true
             
