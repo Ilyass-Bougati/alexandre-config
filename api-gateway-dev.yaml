@@ -55,8 +55,8 @@ spring:
 
 server:
   port: 4000
-  ssl:
-    enabled: true
-    key-store: file:/app/keystore.p12
-    key-store-password: password
-    key-store-type: PKCS12
+  #ssl:
+    #enabled: true
+    #key-store: file:/app/keystore.p12
+    #key-store-password: password
+    #key-store-type: PKCS12
