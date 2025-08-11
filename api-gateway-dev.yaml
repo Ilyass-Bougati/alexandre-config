@@ -11,7 +11,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "https://alexandre-delta.vercel.app/"
+            allowedOrigins: "https://alexandre-delta.vercel.app"
             allowedMethods:
               - GET
               - POST
