@@ -7,6 +7,19 @@ spring:
 
   cloud:
     gateway:
+      # For testing purposes - THIS CAN'T BE USED IN PROD
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "https://alexandre-delta.vercel.app/"
+            allowedMethods:
+              - GET
+              - POST
+              - OPTIONS
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+            allowCredentials: true
       server:
         webflux:
           routes:
