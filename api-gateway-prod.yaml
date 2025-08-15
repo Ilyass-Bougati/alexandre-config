@@ -20,7 +20,9 @@ spring:
               - DELETE
               - OPTIONS
             allowedHeaders: "*"
-            allowCredentials: true
+            exposedHeaders:
+              - Authorization
+            allowCredentials: false
     
       server:
         webflux:
