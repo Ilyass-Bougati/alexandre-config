@@ -7,23 +7,6 @@ spring:
 
   cloud:
     gateway:
-      globalcors:
-        add-to-simple-url-handler-mapping: true
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins:
-              - "https://alexandre-delta.vercel.app"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
-            allowedHeaders: "*"
-            exposedHeaders:
-              - Authorization
-            allowCredentials: false
-    
       server:
         webflux:
           routes:
